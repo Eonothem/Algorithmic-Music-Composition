@@ -1,10 +1,7 @@
 package run;
 
-import java.util.ArrayList;
-
-import musicItems.Chord;
-import musicItems.ChordCreator;
-import musicItems.Note;
+import musicItems.NoteTypes;
+import musicItems.ScaleGenerator;
 
 
 public class Main {
@@ -36,13 +33,10 @@ public class Main {
 			total+=line+"\n";
 		}
 		total+="\n"+lastLine;
-		//System.out.println(total);
 		
-	
-		
-		ChordCreator create = new ChordCreator(notes);
-		for(int i = 1; i <= 7; i++){
-			//System.out.println(create.createTriad(i));
+		String[] s = ScaleGenerator.generateMinorScale("A");
+		for(String lel : s){
+			System.out.println(lel);
 		}
 	}
 }
