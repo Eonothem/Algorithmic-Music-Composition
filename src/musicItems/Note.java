@@ -2,22 +2,22 @@ package musicItems;
 
 public class Note {
 	private String note;
-	private String length;
+	private int length;
 	private int velocity;
 	
 	
 	public Note(String note){
 		this.note = note;
-		length = NoteTypes.QUARTER_NOTE;
+		length = MusicNotes.QUARTER_NOTE;
 		velocity = 127;
 	}
-	public Note(String note, String length){
+	public Note(String note, int length){
 		this.note = note;
 		this.length = length;
 		velocity = 127;
 	}
 	
-	public Note(String note, String length, int velocity){
+	public Note(String note, int length, int velocity){
 		this.note = note;
 		this.length= length;
 		this.velocity = velocity;
@@ -27,7 +27,7 @@ public class Note {
 		return note;
 	}
 	
-	public String getLength(){
+	public int getLength(){
 		return length;
 	}
 	

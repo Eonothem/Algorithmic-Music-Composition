@@ -14,16 +14,17 @@ public class ScaleGenerator {
 		return generateScale(tonic, minorScaleStepPattern);
 	}
 	
-	public static String[] sharpsToFlats(){
-	}
+	//public static String[] sharpsToFlats(){
+		
+	//}
 	
 	private static String[] generateScale(String tonic, int[] stepPattern){
 		String[] scale = new String[7];
 		
-		int currentPos = NoteTypes.allNotes.indexOf(tonic);
+		int currentPos = MusicNotes.allNotes.indexOf(tonic);
 		for(int i = 0; i < 7;i++){
-			scale[i] = NoteTypes.allNotes.get(currentPos);
-			currentPos = (currentPos+stepPattern[i])%NoteTypes.allNotes.size();
+			scale[i] = MusicNotes.allNotes.get(currentPos);
+			currentPos = (currentPos+stepPattern[i])%MusicNotes.allNotes.size();
 		}
 		
 		return scale;
